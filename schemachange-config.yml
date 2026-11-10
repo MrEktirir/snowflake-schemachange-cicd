@@ -1,0 +1,14 @@
+config-version: 2
+
+schemachange:
+  root-folder: ./migrations
+  connection-name: default
+  change-history-table: SCHEMACHANGE_DEMO.PUBLIC.CHANGE_HISTORY
+  create-change-history-table: true
+  connections-file-path: /home/codespace/.snowflake/connections.toml
+
+snowflake:
+  database: SCHEMACHANGE_DEMO
+  schema: PUBLIC
+  warehouse: COMPUTE_WH
+  role: ACCOUNTADMIN
