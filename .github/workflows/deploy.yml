@@ -54,10 +54,10 @@ jobs:
       # 5. Snowflake bağlantı dosyasını oluştur
       - name: Configure Snowflake connection
         env:
-          SF_ACCOUNT: ${{ vars.SNOWFLAKE_ACCOUNT }}
-          SF_USER: ${{ vars.SNOWFLAKE_USER }}
+          SF_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+          SF_USER: ${{ secrets.SNOWFLAKE_USER }}
           SF_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
-          SF_WAREHOUSE: ${{ vars.SNOWFLAKE_WAREHOUSE }}
+          SF_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
         run: |
           python - <<'PY'
           import os
